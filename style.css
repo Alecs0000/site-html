@@ -1,1 +1,20 @@
+body {
+    background-color: #f0f8ff; /* schimbă culoarea de fundal */
+    font-family: Arial, sans-serif; /* schimbă fontul */
+}
+
+h1 {
+    color: #ff4500; /* schimbă culoarea titlului */
+    text-align: center;
+}
+
+p {
+    color: #333333; /* culoare text paragrafe */
+    font-size: 18px;
+}
+
+a {
+    color: #0066cc; /* culoare link */
+    text-decoration: none;
+}
 
