@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to alxxxx's Projects</title>
+  <style>
+    body{margin:0;font-family:Arial, sans-serif;background:#0a0a0a;color:#f5f5f5;}
+    header{position:fixed;top:0;width:100%;padding:15px;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);}
+    nav a{margin-right:20px;text-decoration:none;color:#0ff;transition:0.3s;}
+    nav a:hover{text-shadow:0 0 8px #0ff;}
+    section{padding:100px 20px;min-height:100vh;}
+    .neon-title{font-size:2.5rem;text-align:center;text-shadow:0 0 10px #0ff,0 0 20px #0ff;}
+    .project{background:#111;padding:20px;margin:15px 0;border-radius:8px;transition:0.3s;}
+    .project:hover{transform:scale(1.02);box-shadow:0 0 15px #0ff;}
+  </style>
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+  <style>
+    /* Neon cursor */
+    body { cursor: url('https://cur.cursors-4u.net/cursors/cur-13/cur1175.cur'), auto; }
+    /* Fullscreen particles container */
+    #particles-js { position: fixed; top:0; left:0; width:100%; height:100%; z-index:-1; }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a> <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" data-aos="fade-up">
+    <h1 class="neon-title">Welcome to My Portfolio</h1>
+    <p style="text-align:center;">This is the home section. Add a short introduction or slogan here.</p>
+    <h1 class="neon-title">Projects</h1>
+    <h2 style="margin-top:20px;">Web Projects</h2>
+    <!-- Add your web projects below -->
+    <h2 style="margin-top:20px;">Game Projects</h2>
+    <!-- Add your game projects below -->
+    <div class="project" data-aos="zoom-in">
+      <h2>Project Title 1</h2>
+      <p>Short description of your first project.</p>
+    </div>
+    <div class="project" data-aos="zoom-in">
+      <h2>Project Title 2</h2>
+      <p>Short description of your second project.</p>
+    </div>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <h1 class="neon-title">About Me</h1>
+    <p>Write something about yourself here. Who you are, what you do, and your skills.</p>
+  </section>
+
+  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script> AOS.init(); </script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      particles: {number:{value:80},size:{value:3}},
+      interactivity:{events:{onhover:{enable:true,mode:'repulse'}}}
+    });
+  </script>
+  <section id="contact" data-aos="fade-up">
+    <h1 class="neon-title">Contact</h1>
+    <form>
+      <input type="text" placeholder="Your Name" style="width:100%;padding:10px;margin:5px 0;background:#111;border:none;color:#fff;">
+      <input type="email" placeholder="Your Email" style="width:100%;padding:10px;margin:5px 0;background:#111;border:none;color:#fff;">
+      <textarea placeholder="Message" style="width:100%;padding:10px;margin:5px 0;background:#111;border:none;color:#fff;"></textarea>
+      <button type="submit" style="padding:10px 20px;background:#0ff;border:none;color:#000;border-radius:5px;cursor:pointer;">Send</button>
+    </form>
+  </section>
+</body>
+</html>
