@@ -1,151 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Alxxxx's Projects</title>
-<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<style>
-/* General Styles */
-body {
-  margin:0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(120deg, #0a0a0a, #1a1a1a);
-  color: #f5f5f5;
-  scroll-behavior: smooth;
-  transition: background 0.5s;
-}
-
-/* Header and Navigation */
-header {
-  position: fixed;
-  top:0;
-  width:100%;
-  padding:15px;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 10px #0ff;
-  z-index:1000;
-}
-nav a {
-  margin-right:20px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-}
-nav a:nth-child(1) { color: #1e90ff; }
-nav a:nth-child(2) { color: #ff8c00; }
-nav a:nth-child(3) { color: #ff0000; }
-nav a:nth-child(4) { color: #32cd32; }
-nav a:hover { text-shadow: 0 0 10px #fff, 0 0 20px #ff0; transform: scale(1.1); }
-
-/* Sections */
-section { padding:120px 20px; min-height:100vh; animation: fadeIn 1s ease forwards; }
-@keyframes fadeIn { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform: translateY(0);} }
-
-/* Neon Titles */
-#home .neon-title {
-  font-size:3rem;
-  text-align:center;
-  font-weight:bold;
-  animation: neonColorChange 5s infinite;
-}
-@keyframes neonColorChange {
-  0%,20% { color: #1e90ff; text-shadow: 0 0 10px #1e90ff, 0 0 20px #00f; }
-  25% { color: #00ffff; text-shadow: 0 0 10px #00ffff, 0 0 20px #0ff; }
-  50% { color: #ff1493; text-shadow: 0 0 10px #ff1493, 0 0 20px #ff69b4; }
-  75% { color: #ff4500; text-shadow: 0 0 10px #ff4500, 0 0 20px #ff6347; }
-  100% { color: #1e90ff; text-shadow: 0 0 10px #1e90ff, 0 0 20px #00f; }
-}
-#about .neon-title { color: #ff8c00; text-shadow: 0 0 10px #ff8c00, 0 0 20px #ffa500; font-weight:bold; }
-#projects .neon-title, #contact .neon-title { color: #ff0000; text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4500; font-weight:bold; }
-
-/* Section-specific Text Colors */
-#home p.custom-purple { color: #9b59b6; font-weight:bold; }
-#about p, #about .skill-bar { color: #ff8c00; }
-#projects .project h2 { color: #ff0000; }
-#projects .project p { color: #ff6347; }
-#contact form input, #contact form textarea { color: #ff1493; border-color: #ff69b4; }
-#contact button { background: linear-gradient(90deg, #ff69b4, #ff1493); color: #fff; }
-
-/* Projects */
-.project { background: linear-gradient(135deg, #111, #222); padding:20px; margin:15px 0; border-radius:12px; transition:0.3s; box-shadow: 0 0 5px #0ff; }
-.project:hover { transform: scale(1.05) rotate(-1deg); box-shadow: 0 0 20px #0ff, 0 0 40px #ff0; }
-
-/* Forms */
-form input, form textarea { width:100%; padding:12px; margin:8px 0; background: #111; border:1px solid #0ff; border-radius:6px; transition:0.3s; }
-form input:focus, form textarea:focus { border-color: #ff0; box-shadow: 0 0 10px #0ff, 0 0 20px #ff0; outline: none; }
-button { padding:12px 25px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
-button:hover { transform: scale(1.05); box-shadow: 0 0 15px #0ff, 0 0 30px #ff0; }
-
-/* Skills Bars */
-.skill-bar {margin:10px 0; background:#111; border-radius:8px; overflow:hidden;}
-.skill-bar-inner {height:20px; width:0; border-radius:8px; transition:width 1.5s;}
-.skill-html { background: #1e90ff; }
-.skill-js { background: #ffff00; }
-.skill-react { background: #32cd32; }
-
-/* Footer */
-footer {text-align:center; padding:20px; background:#111; border-top:2px solid #0ff;}
-footer a {color:#0ff; margin:0 10px; transition:0.3s;}
-footer a:hover {color:#ff0;}
-
-/* Particles */
-#particles-js {position: fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Personal Portfolio Website HTML CSS Javascript | Codehal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-
-<div id="particles-js"></div>
-<header>
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About Me</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-  <button id="toggleMode" style="float:right;">🌞/🌙</button>
-</nav>
-</header>
-
-<section id="home" data-aos="fade-up">
-<h1 class="neon-title">Welcome to alxxxx's Projects</h1>
-<p class="custom-purple" style="text-align:center;">ᴇxᴘʟᴏʀᴇ ᴍʏ ᴘʀᴏᴊᴇᴄᴛꜱ ᴀɴᴅ ꜱᴋɪʟʟꜱ ʙʏ ꜱᴄʀᴏʟʟɪɴɢ ᴅᴏᴡɴ!</p>
-</section>
-
-<section id="about" data-aos="fade-up">
-<h1 class="neon-title">About Me</h1>
-<p>I'm a passionate developer working with web and game projects. I love creating interactive experiences and dynamic designs.</p>
-<div class="skill-bar" data-aos="fade-right"><div class="skill-bar-inner skill-html" style="width:90%;"></div> HTML/CSS</div>
-<div class="skill-bar" data-aos="fade-right" data-aos-delay="100"><div class="skill-bar-inner skill-js" style="width:80%;"></div> JavaScript</div>
-<div class="skill-bar" data-aos="fade-right" data-aos-delay="200"><div class="skill-bar-inner skill-react" style="width:70%;"></div> React</div>
-</section>
-
-<section id="projects" data-aos="fade-up">
-<h1 class="neon-title">Projects</h1>
-<div class="project" data-aos="zoom-in"><h2>Project 1</h2><p>Web project description</p></div>
-<div class="project" data-aos="zoom-in" data-aos-delay="100"><h2>Project 2</h2><p>Game project description</p></div>
-</section>
-
-<section id="contact" data-aos="fade-up">
-<h1 class="neon-title">Contact</h1>
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Message"></textarea>
-<button type="submit">Send</button>
-</form>
-</section>
-
-<footer>
-<p>ᴀɴʏ ɴᴇᴇᴅ ꜰᴏʀ ʜᴇʟᴘ ꜰʀᴏᴍ ᴍʏ ꜱɪᴅᴇ 
-https://discord.gg/8Kdbt8ut</p>
-<a href="#"><i class="fab fa-github"></i></a>
-<a href="#"><i class="fab fa-linkedin"></i></a>
-<a href="#"><i class="fab fa-twitter"></i></a>
-</footer>
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script> AOS.init(); </script>
-<script src="https://cdn.jsdelivr.net/npm/
-
-
+    <!-- header design -->
+    <!-- home section design -->
+    <!-- about section design -->
+    <!-- education section design -->
+    <!-- skills section design -->
+    <!-- contact section design -->
+    <!-- footer design -->
+    <script src="js/script.js"></script>
+</body>
+</html>
